@@ -5,34 +5,27 @@ import java.util.Scanner;
 public class StyProgrammers05 {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		long n = sc.nextLong();
+		long n = 12345;
+		long num = n;
+		// 배열 길이 구하기
+		int len = 0;
+		while(n>0) {
+			n /= 10;
+			len++;
+		}
 		
+		int[] answer = new int[len];
 		
-		int[] answer = solution(n);
+		// 배열에 넣기
+		int idx = 0;
+		while(num>0) {
+			answer[idx] = (int)(num%10);
+			idx++;
+			num /= 10;
+		}
 		
-		for(int i=0; i < answer.length; i++) {
+		for(int i = 0; i < len; i++) {
 			System.out.println(answer[i]);
 		}
 	}
-
-	private static int[] solution(long n) {
-		
-		int length = 0;
-		while(n > 0) {
-			n /= 10;
-			
-			length += 1;
-		}
-		
-		int[] answer = new int[length];
-		
-		for(int i = 0; n != 0; i++) {
-			answer[i] = (int)(n % 10);
-			n /= 10;
-		}
-		
-		return answer;
-	}
-
 }

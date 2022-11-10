@@ -1,26 +1,27 @@
-package algorithmStep01;
+package main;
 
 import java.util.Scanner;
 
-public class StyProgrammers03 {
+public class StyProgrammers04 {
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		
 		int n = sc.nextInt();
 		
 		int answer = solution(n);
+		
 		System.out.println(answer);
 	}
 
 	private static int solution(int n) {
-		int answer = 0;
-		
-		for(int i = 1; i <= n; i++) {
-			if(n%i == 0) {
-				answer += i;
-			}
-		}
-		
-		return answer;
+	    int answer = 0;
+	    
+	    while(n > 0) {
+	    	answer += n%10;
+	    	n /= 10;
+	    }
+	    
+	    return answer;
 	}
+
 }

@@ -1,4 +1,4 @@
-package algorithmStep01;
+package main;
 
 import java.util.Scanner;
 

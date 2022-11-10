@@ -1,4 +1,4 @@
-package algorithmStep00;
+package main;
 
 public class StyProgrammers05 {
 

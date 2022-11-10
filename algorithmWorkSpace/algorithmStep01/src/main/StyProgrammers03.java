@@ -1,16 +1,14 @@
-package algorithmStep00;
+package main;
 
 import java.util.Scanner;
 
-public class StyProgrammers04 {
-
+public class StyProgrammers03 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
 		int n = sc.nextInt();
 		
 		int answer = solution(n);
-		
 		System.out.println(answer);
 	}
 
@@ -18,13 +16,11 @@ public class StyProgrammers04 {
 		int answer = 0;
 		
 		for(int i = 1; i <= n; i++) {
-			
-			if(i%2 == 0) {
+			if(n%i == 0) {
 				answer += i;
 			}
 		}
 		
 		return answer;
 	}
-
 }

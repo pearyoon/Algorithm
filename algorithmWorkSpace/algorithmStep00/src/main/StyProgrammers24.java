@@ -3,21 +3,19 @@ package main;
 public class StyProgrammers24 {
 
 	public static void main(String[] args) {
-		int price = 580000;
-		int answer = 0;
-		int discount = 0;
+		int price = 150000;
 		
 		if(price >= 500000) {
-			discount = (int)(price*0.2);
+			price *= 0.8;
 		} else if(price >= 300000) {
-			discount = (int)(price*0.1);
+			price *= 0.9;
 		} else if(price >= 100000) {
-			discount = (int)(price*0.05);
+			price *= 0.95;
 		}
 		
-		answer = price-discount;
 		
-		System.out.println(answer);
+		
+		System.out.println(Math.floor(price));
 		
 		// 내일 수정예정
 	}
